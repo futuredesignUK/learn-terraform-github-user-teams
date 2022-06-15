@@ -8,7 +8,7 @@ resource "github_membership" "all" {
     member.username => member
   }
 
-# The resource block references a specific user's information with each.value.attribute_name, where attribute_name maps to the header row in the CSV file. For example, each.value.username maps to the username column.
+  # The resource block references a specific user's information with each.value.attribute_name, where attribute_name maps to the header row in the CSV file. For example, each.value.username maps to the username column.
   username = each.value.username
   role     = each.value.role
 }
